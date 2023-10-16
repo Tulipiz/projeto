@@ -29,7 +29,8 @@ body {
     background-size: cover;/* cobre o resto da pagina com a imagem/
     */
   /* background: */
-  background: var(--bg-url);
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -154,4 +155,14 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* medi queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/assets/bg-desktop-light.jpg);
+  }
 }
